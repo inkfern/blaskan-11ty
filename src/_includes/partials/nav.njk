@@ -1,0 +1,22 @@
+<nav id="site-navigation" class="main-navigation container" role="navigation">
+<div class="blaskan-main-menu">
+
+<ul id="primary-menu" class="menu">
+
+
+   {%- for item in nav.navigation -%}
+      <li>
+        <a
+          class="menu-item menu-item-type-taxonomy menu-item-object-category"
+            {% if item.fullMatch %}
+              {% if item.path === page.url %} active {% endif %}
+            {% else %}
+              {% if item.path in page.url %} active {% endif %}
+            {% endif %}
+          "
+          href="{{ item.path }}"
+        > {{ item.title }}</a>
+      </li>
+    {%- endfor -%}
+</ul> </div>
+</nav>

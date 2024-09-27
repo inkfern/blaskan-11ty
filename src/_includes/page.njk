@@ -13,9 +13,9 @@
 <div class="blaskan-social-menu pull-right">
 <div class="menu-social-menu-container">
 <ul id="social-menu" class="menu">
-<li id="menu-item-33" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33"><a href="https://www.facebook.com/colorlib"><span>Facebook</span></a></li>
-<li id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32"><a href="https://twitter.com/colorlib"><span>Twitter</span></a></li>
-<li id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34"><a target="_blank" rel="noopener" href="https://www.linkedin.com/company/colorlib/"><span>LinkedIn</span></a></li>
+<li class="menu-item"><a href="https://www.facebook.com/colorlib"><span>Facebook</span></a></li>
+<li class="menu-item"><a href="https://twitter.com/colorlib"><span>Twitter</span></a></li>
+<li class="menu-item"><a target="_blank" rel="noopener" href="https://www.linkedin.com/company/colorlib/"><span>LinkedIn</span></a></li>
 </ul>
 </div> 
 </div>
@@ -46,13 +46,13 @@
   {% block content %}
     <article  class="col-md-12 col-sm-12 post type-post status-publish format-standard has-post-thumbnail hentry">
 
-<div class="entry-thumbnail"><img width="1140" height="760" src="https://149842022.v2.pressablecdn.com/blaskan/wp-content/uploads/sites/63/2017/04/01_Article1.jpg" class="attachment-small-blog-post size-small-blog-post wp-post-image" alt decoding="async" fetchpriority="high" srcset="https://149842022.v2.pressablecdn.com/blaskan/wp-content/uploads/sites/63/2017/04/01_Article1.jpg 1140w , https://149842022.v2.pressablecdn.com/blaskan/wp-content/uploads/sites/63/2017/04/01_Article1-300x200.jpg 300w , https://149842022.v2.pressablecdn.com/blaskan/wp-content/uploads/sites/63/2017/04/01_Article1-768x512.jpg 768w , https://149842022.v2.pressablecdn.com/blaskan/wp-content/uploads/sites/63/2017/04/01_Article1-1024x683.jpg 1024w " sizes="(max-width: 1140px) 100vw, 1140px" /></div>
+<div class="entry-thumbnail"><img width="1140" height="760" src="https://149842022.v2.pressablecdn.com/blaskan/wp-content/uploads/sites/63/2017/04/01_Article1.jpg" class="attachment-small-blog-post size-small-blog-post" alt decoding="async" fetchpriority="high" srcset="https://149842022.v2.pressablecdn.com/blaskan/wp-content/uploads/sites/63/2017/04/01_Article1.jpg 1140w , https://149842022.v2.pressablecdn.com/blaskan/wp-content/uploads/sites/63/2017/04/01_Article1-300x200.jpg 300w , https://149842022.v2.pressablecdn.com/blaskan/wp-content/uploads/sites/63/2017/04/01_Article1-768x512.jpg 768w , https://149842022.v2.pressablecdn.com/blaskan/wp-content/uploads/sites/63/2017/04/01_Article1-1024x683.jpg 1024w " sizes="(max-width: 1140px) 100vw, 1140px" /></div>
 <div class="entry-meta">
 <span class="byline">by <span class="author vcard"><a class="url fn n" href="https://colorlibhub.com/blaskan/author/demoblaskan/">{{ author }}</a></span></span>
 <span class="category-delimeter"> - </span>
 <span class="cat-links">
 {%- for t in categories -%}
-  <a href="https://colorlibhub.com/blaskan/category/{{ t }}" rel="category tag">{{ t }}</a>, &nbsp
+  <a href="https://colorlibhub.com/blaskan/category/{{ t }}" rel="category tag">{{ t }}</a>,&nbsp
 {%- endfor -%}
 </span>
 <span class="posted-on"><span class="posted-on-delimeter"> - </span><a href="{{ permalink }}" rel="bookmark"><time class="entry-date" datetime="{{ date }}">{{ date }}</time></a></span> </div>
@@ -72,7 +72,7 @@
 
 
   <aside id="secondary" class="widget-area col-md-4 col-sm-12" role="complementary">
-	  Sidebar
+	  {% include "partials/sidebar.njk" %}
   </aside><!-- #secondary -->
 </div>
 </div>

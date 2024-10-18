@@ -3,7 +3,7 @@ title: Explore new places every single day
 date: 2024-09-26
 tags: [Learn, Lyfestyle, Natural]
 categories: ["Adventures", "Citybreakes", "Landscapes", "Lifestyle", "Travel"]
-layout: page.njk
+layout: post.njk
 image: null
 author: "Jane Smith"
 ---

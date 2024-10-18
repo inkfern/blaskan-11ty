@@ -1,0 +1,15 @@
+{
+  "name": "blaskanink_11ty",
+  "version": "1.0.0",
+  "description": "Port of the blaskan wordpress theme by colorlib to 11ty",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "luxon": "^3.5.0"
+  }
+}

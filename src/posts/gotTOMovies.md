@@ -3,7 +3,7 @@ title: Go to the Movies
 date: 2017-04-15
 tags: [Learn, Lyfestyle, Natural]
 categories: ["Cinema", "Lifestyle", "Books"]
-layout: page.njk
+layout: post.njk
 image: null
 author: "Jane Smith"
 ---

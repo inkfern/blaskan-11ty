@@ -3,7 +3,7 @@ title: Travel where you want.
 date: 2017-04-20
 tags: ["Decor", "Design", "Dive", "Furniture"]
 categories: ["Adventures", "Citybreakes", "Landscapes", "Lifestyle", "Travel"]
-layout: page.njk
+layout: post.njk
 image: null
 author: "Jane Smith"
 ---

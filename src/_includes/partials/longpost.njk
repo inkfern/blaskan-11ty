@@ -6,9 +6,8 @@
 <span class="byline">by <span class="author vcard"><a class="url fn n" href="https://colorlibhub.com/blaskan/author/demoblaskan/">{{ author }}</a></span></span>
 <span class="category-delimeter"> - </span>
 <span class="cat-links">
-{%- for t in categories -%}
-<a href="https://colorlibhub.com/blaskan/category/{{ t }}" rel="category tag">{{ t }}</a>,&nbsp
-{%- endfor -%}
+{% set ind = 0%}
+{%- for t in categories -%}{% set ind = ind + 1%}<a href="https://colorlibhub.com/blaskan/category/{{ t }}" rel="category tag">{{ t }}</a>{%if ind < categories.length %},&nbsp{%endif %}{%- endfor -%}
 </span>
 <span class="posted-on"><span class="posted-on-delimeter"> - </span><a href="{{ permalink }}" rel="bookmark"><time class="entry-date" datetime="{{ date | postDate }}">{{ date | postDate }}</time></a></span> </div>
 

@@ -3,12 +3,12 @@
     <h5 class="widget-title">Recent Posts</h5>
     <ul>
 
-        {%- for post in collections.post -%}
+        {%- for post in collections.post | reverse-%}
         {# <li{% if page.url == post.url %} aria-current="page"{% endif %}>{{ post.data.title }}</li> #}
         {% if loop.index0 < 5 %}
         <li>
         <a href="{{ post.url }}" {% if page.url == post.url %} aria-current="page"{% endif %}>{{ post.data.title }}</a>
-        <span class="post-date">{{ date | postDate }}</span>
+        <span class="post-date">{{ post.date | postDate }}</span>
         </li>
         {% endif %}
         {%- endfor -%}

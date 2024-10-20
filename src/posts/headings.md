@@ -1,6 +1,6 @@
 ---
 title: "Markup: HTML Tags and Formatting"
-date: 2017-04-16
+date: 2024-10-16
 tags: []
 categories: []
 layout: post.njk

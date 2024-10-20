@@ -1,0 +1,16 @@
+<section id="recent-posts-2" class="widget widget_recent_entries">
+    
+    <h5 class="widget-title">Recent Posts</h5>
+    <ul>
+
+        {%- for post in collections.post -%}
+        {# <li{% if page.url == post.url %} aria-current="page"{% endif %}>{{ post.data.title }}</li> #}
+        {% if loop.index0 < 5 %}
+        <li>
+        <a href="{{ post.url }}" {% if page.url == post.url %} aria-current="page"{% endif %}>{{ post.data.title }}</a>
+        <span class="post-date">{{ date | postDate }}</span>
+        </li>
+        {% endif %}
+        {%- endfor -%}
+    </ul>
+    </section>

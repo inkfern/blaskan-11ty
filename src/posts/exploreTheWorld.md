@@ -1,7 +1,7 @@
 ---
 title: Explore the world
 date: 2017-04-21
-tags: ["Decor", "Design", "Dive", "Furniture"]
+tags: ["Decor", "Design", "Dive", "Furniture",]
 categories: ["Adventures", "Citybreakes", "Landscapes", "Lifestyle", "Travel"]
 layout: post.njk
 image: null

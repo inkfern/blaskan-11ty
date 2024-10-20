@@ -1788,7 +1788,7 @@ a:active {
     color: #fff;
 }
 #colophon .widget-area .widget .widget-title {
-	text-align: left;
+	text-align: center;
 }
 
 #colophon .widget_nav_menu li:not(:last-child) > .sub-menu > li:last-child,

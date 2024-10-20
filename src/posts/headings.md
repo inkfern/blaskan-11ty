@@ -108,54 +108,87 @@ Multi line blockquote with a cite reference:
 3. List item three
 4. List item four
 
-## HTML Tags
+## MarkDown Tags
 
-These supported tags come from the WordPress.com code <a title="Code" href="http://en.support.wordpress.com/code/">FAQ</a>.
+The following markdown elements are supported.
 
-<p><strong>Address Tag</strong></p>
+**Address Tag**
+
 <address>1 Infinite Loop<br/>
 Cupertino, CA 95014<br/>
 United States</address>
-<p><strong>Anchor Tag (aka. Link)</strong></p>
+
+**Anchor Tag (aka. Link)**
+
 <p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
-<p><strong>Abbreviation Tag</strong></p>
+
+**Abbreviation Tag**
+
 <p>The abbreviation <abbr title="Seriously">srsly</abbr> stands for &#8220;seriously&#8221;.</p>
-<p><strong>Acronym Tag (<em>deprecated in HTML5</em>)</strong></p>
+
+**Acronym Tag (<em>deprecated in HTML5</em>)**
+
 <p>The acronym <acronym title="For The Win">ftw</acronym> stands for &#8220;for the win&#8221;.</p>
-<p><strong>Big Tag <strong>(<em>deprecated in HTML5</em>)</strong></strong></p>
-<p>These tests are a <big>big</big> deal, but this tag is no longer supported in HTML5.</p>
-<p><strong>Cite Tag</strong></p>
+
+
+**Cite Tag**
+
 <p>&#8220;Code is poetry.&#8221; &#8212;<cite>Automattic</cite></p>
-<p><strong>Code Tag</strong></p>
-<p>You will learn later on in these tests that <code>word-wrap: break-word;</code> will be your best friend.</p>
-<p><strong>Delete Tag</strong></p>
-<p>This tag will let you <del>strikeout text</del>, but this tag is no longer supported in HTML5 (use the <code>&lt;strike&gt;</code> instead).</p>
-<p><strong>Emphasize Tag</strong></p>
-<p>The emphasize tag should <em>italicize</em> text.</p>
-<p><strong>Insert Tag</strong></p>
+
+**Code Tag**
+
+You will learn later on in these tests that `word-wrap: break-word;` will be your best friend.
+
+**Strike through**
+
+This tag will let you ~~strikeout text~~.</p>
+
+**Emphasize Tag**
+
+The emphasize tag should *italicize* text.
+
+**Insert Tag**
+
 <p>This tag should denote <ins>inserted</ins> text.</p>
-<p><strong>Keyboard Tag</strong></p>
+
+**Keyboard Tag**
+
 <p>This scarcely known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-<p><strong>Preformatted Tag</strong></p>
-<p>This tag styles large blocks of code.</p>
-<pre>.post-title {
-	margin: 0 0 5px;
-	font-weight: bold;
-	font-size: 38px;
-	line-height: 1.2;
-	and here's a line of some really, really, really, really long text, just to see how the PRE tag handles it and to find out how it overflows;
-}</pre>
-<p><strong>Quote Tag</strong></p>
+
+**Preformatted Tag**
+
+```
+.post-title {
+ 	margin: 0 0 5px;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 1.2;
+    and here's a line of some really, really, really, really long text, just to see how the PRE tag handles it and to find out how it overflows;
+}
+```
+
+**Quote Tag**
+
 <p><q>Developers, developers, developers&#8230;</q> &#8211;Steve Ballmer</p>
-<p><strong>Strike Tag <strong>(<em>deprecated in HTML5</em>)</strong></strong></p>
-<p>This tag shows <span style="text-decoration: line-through">strike-through text</span></p>
-<p><strong>Strong Tag</strong></p>
-<p>This tag shows <strong>bold<strong> text.</strong></strong></p>
-<p><strong>Subscript Tag</strong></p>
+
+
+**Strong Tag**
+
+This tag shows **bold** text.
+
+
+**Subscript Tag**
+
 <p>Getting our science styling on with H<sub>2</sub>O, which should push the &#8220;2&#8221; down.</p>
-<p><strong>Superscript Tag</strong></p>
+
+**Superscript Tag**
+
 <p>Still sticking with science and Isaac Newton&#8217;s E = MC<sup>2</sup>, which should lift the 2 up.</p>
-<p><strong>Teletype Tag <strong>(<em>deprecated in HTML5</em>)</strong></strong></p>
+
+**Teletype Tag <strong>(<em>deprecated in HTML5</em>)</strong>**
+
 <p>This rarely used tag emulates <tt>teletype text</tt>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
-<p><strong>Variable Tag</strong></p>
+
+**Variable Tag**
+
 <p>This allows you to denote <var>variables</var>.</p>

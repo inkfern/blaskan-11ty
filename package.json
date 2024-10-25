@@ -4,7 +4,6 @@
   "description": "Port of the blaskan wordpress theme by colorlib to 11ty",
   "main": ".eleventy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "watch:eleventy": "eleventy --serve",
     "build:eleventy": "ELEVENTY_ENV=development eleventy",
     "start": "npm run watch:eleventy",

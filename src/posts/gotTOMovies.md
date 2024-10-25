@@ -4,7 +4,7 @@ date: 2017-04-15
 tags: [Learn, Lyfestyle, Natural]
 categories: ["Cinema", "Lifestyle", "Books"]
 layout: post.njk
-image: null
+image: 01_Article6.jpg
 author: "Jane Smith"
 ---
 

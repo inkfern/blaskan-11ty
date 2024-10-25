@@ -4,7 +4,7 @@ date: 2017-04-20
 tags: ["Decor", "Design", "Dive", "Furniture"]
 categories: ["Adventures", "Citybreakes", "Landscapes", "Lifestyle", "Travel"]
 layout: post.njk
-image: null
+image: 01_Article2.jpg
 author: "Jane Smith"
 ---
 

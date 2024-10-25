@@ -4,7 +4,7 @@ date: 2024-09-26
 tags: [Learn, Lyfestyle, Natural]
 categories: ["Adventures", "Citybreakes", "Landscapes", "Lifestyle", "Travel"]
 layout: post.njk
-image: null
+image: 01_Article1.jpg
 author: "Jane Smith"
 ---
 

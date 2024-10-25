@@ -4,7 +4,7 @@ date: 2024-10-16
 tags: []
 categories: []
 layout: post.njk
-image: null
+image: 01_Article1.jpg
 author: "CR"
 ---
 
@@ -120,7 +120,7 @@ United States</address>
 
 **Anchor Tag (aka. Link)**
 
-<p>This is an example of a <a title="Apple" href="http://apple.com">link</a>.</p>
+This is an example of a <a title="Apple" href="http://apple.com">link</a>.
 
 **Abbreviation Tag**
 
@@ -133,7 +133,7 @@ United States</address>
 
 **Cite Tag**
 
-<p>&#8220;Code is poetry.&#8221; &#8212;<cite>Automattic</cite></p>
+&#8220;Code is poetry.&#8221; &#8212;<cite>Automattic</cite>
 
 **Code Tag**
 
@@ -149,11 +149,11 @@ The emphasize tag should *italicize* text.
 
 **Insert Tag**
 
-<p>This tag should denote <ins>inserted</ins> text.</p>
+This tag should denote <ins>inserted</ins> text.
 
 **Keyboard Tag**
 
-<p>This scarcely known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the <code>&lt;code&gt;</code> tag.</p>
+This scarcely known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the `<code>` tag.
 
 **Preformatted Tag**
 

@@ -1,5 +1,5 @@
 {
-  "name": "blaskanink_11ty",
+  "name": "blaskan-11ty",
   "version": "1.0.0",
   "description": "Port of the blaskan wordpress theme by colorlib to 11ty",
   "main": ".eleventy.js",

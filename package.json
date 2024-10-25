@@ -2,7 +2,7 @@
   "name": "blaskan-11ty",
   "version": "1.0.0",
   "description": "Port of the blaskan wordpress theme by colorlib to 11ty",
-  "main": "index.js",
+  "main": ".eleventy.js",
   "scripts": {
     "watch:eleventy": "eleventy --serve",
     "build:eleventy": "ELEVENTY_ENV=development eleventy",

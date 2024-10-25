@@ -1,10 +1,12 @@
 // 11ty configuration
 
 const { DateTime } = require("luxon");
+// const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 
-module.exports = eleventyConfig => {
+module.exports = async function(eleventyConfig) {
     // const { DateTime } = require("luxon");
+    const {EleventyRenderPlugin, EleventyI18nPlugin, EleventyHtmlBasePlugin} = await import("@11ty/eleventy");
 
     // Copy as is to final site
     eleventyConfig.addPassthroughCopy("./src/styles");
@@ -16,6 +18,7 @@ module.exports = eleventyConfig => {
     });
   
   
+    eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
     // 11ty defaults
     return {
   
@@ -24,7 +27,8 @@ module.exports = eleventyConfig => {
         data: "_data",
         includes: '_includes',
         output: '_site'
-      }
+      },
+      pathPrefix: "/blaskan-11ty/"
   
     };
 

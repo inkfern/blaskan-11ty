@@ -17,6 +17,11 @@ module.exports = async function(eleventyConfig) {
       return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_FULL);
     });
   
+    eleventyConfig.addFilter("excerpt", (post) => {
+      // const content = post.replace(/(<([^>]+)>)/gi, "");
+      const content = post;
+      return content.substr(0, content.lastIndexOf(" ", 100)) + "...";
+    });
   
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
     // 11ty defaults

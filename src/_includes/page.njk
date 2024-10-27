@@ -22,6 +22,90 @@
 <div id="primary" class="content-area row">
 <main id="main" class="site-main col-md-8 col-sm-12" role="main">
 
+  <div id ="post-container" class="row" style="position: relative;">
+{%- for post in collections.post | reverse-%}
+        {# <li{% if page.url == post.url %} aria-current="page"{% endif %}>{{ post.data.title }}</li> #}
+        {% if loop.index0 < 1 %}
+        {# <li>
+        <a href="{{ post.url }}" {% if page.url == post.url %} aria-current="page"{% endif %}>{{ post.data.title }}</a>
+        <span class="post-date">{{ post.date | postDate }}</span>
+        </li> #}
+        <article id="post-23" class="big-post col-md-12 post-23 post type-post status-publish format-standard has-post-thumbnail hentry" style="position: absolute; left: 0%; top: 0px;">
+          <header class="entry-header">
+                      <div class="entry-meta">
+              <span class="byline">by <span class="author vcard"><a class="url fn n" href="https://colorlibhub.com/blaskan/author/demoblaskan/">{{ post.data.author }}</a></span></span> - <span class="post-date">{{ post.date | postDate }}</span></div><!-- .entry-meta -->
+          
+          <h2 class="entry-title"> <a href="{{ post.url }}" {% if page.url == post.url %} aria-current="page"{% endif %}>{{ post.data.title }}</a></h2>
+          <div class="entry-thumbnail"><a href="{{ post.url }}" {% if page.url == post.url %} aria-current="page"{% endif %}><img width="1140" height="375" src="img/{{ post.data.image }}" class="attachment-big-blog-post size-big-blog-post" alt="" decoding="async" fetchpriority="high"></a></div>
+          </header><!-- .entry-header -->
+        
+          <div class="entry-content">
+            {{ post.content | excerpt | safe }}
+        <footer class="entry-footer index-entry">
+        <div class="post-social pull-left">Socials</div>
+        <p> <a href="{{ post.url }}" class="more-link">Continue reading <span class="screen-reader-text">“Explore new places every single day”</span> <span class="meta-nav">→</span></a></p></footer>
+          </div><!-- .entry-content -->
+        </article><!-- #post-## -->
+  {% endif %}
+{%- endfor -%}
+
+
+
+{% block content %}
+{# 
+
+
+
+<article id="post-23" class="big-post col-md-12 post-23 post type-post status-publish format-standard has-post-thumbnail hentry category-adventures category-citybreakes category-landscapes category-lifestyle category-travel tag-decor tag-design tag-dive tag-furniture tag-health tag-learn tag-lifestyle tag-materials tag-natural tag-run tag-supplies" style="position: absolute; left: 0%; top: 0px;">
+  <header class="entry-header">
+              <div class="entry-meta">
+      <span class="byline">by <span class="author vcard"><a class="url fn n" href="https://colorlibhub.com/blaskan/author/demoblaskan/">Jane Smith</a></span></span><span class="posted-on"><span class="posted-on-delimeter">  -  </span><a href="https://colorlibhub.com/blaskan/2017/04/20/explore-new-places-every-single-day/" rel="bookmark"><time class="entry-date published" datetime="2017-04-20T08:47:44+00:00">April 20, 2017</time><time class="updated" datetime="2020-10-27T14:16:54+00:00">October 27, 2020</time></a></span>            </div><!-- .entry-meta -->
+  
+  <h2 class="entry-title"><a href="https://colorlibhub.com/blaskan/2017/04/20/explore-new-places-every-single-day/" rel="bookmark">Explore new places every single day</a></h2>
+  <div class="entry-thumbnail"><a href="https://colorlibhub.com/blaskan/2017/04/20/explore-new-places-every-single-day/" rel="bookmark"><img width="1140" height="570" src="https://149842022.v2.pressablecdn.com/blaskan/wp-content/uploads/sites/63/2017/04/01_Article1-1140x570.jpg" class="attachment-big-blog-post size-big-blog-post wp-post-image" alt="" decoding="async" fetchpriority="high"></a></div>
+  </header><!-- .entry-header -->
+
+  <div class="entry-content">
+  <p>Integer at pharetra metus, non porttitor lorem. Pellentesque consectetur lacus at erat maximus fringilla. Mauris suscipit commodo lacus id rutrum. Suspendisse potenti. Vestibulum cursus lobortis suscipit. Pellentesque vel eleifend urna. Praesent id pellentesque metus. Aenean accumsan ipsum ac consectetur convallis. Sed efficitur blandit turpis ut rhoncus. Integer vehicula risus eget purus porttitor gravida. Ut dapibus aliquet quam, non tempus elit varius non. Aliquam rutrum molestie ipsum eu feugiat.</p>
+<footer class="entry-footer index-entry">
+<div class="post-social pull-left"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcolorlibhub.com%2Fblaskan%2F2017%2F04%2F20%2Fexplore-new-places-every-single-day%2F" target="_blank" class="social-icons"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="https://twitter.com/home?status=https%3A%2F%2Fcolorlibhub.com%2Fblaskan%2F2017%2F04%2F20%2Fexplore-new-places-every-single-day%2F" target="_blank" class="social-icons"><i class="fa fa-twitter" aria-hidden="true"></i></a><a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fcolorlibhub.com%2Fblaskan%2F2017%2F04%2F20%2Fexplore-new-places-every-single-day%2F&amp;media=https%3A%2F%2Fcolorlibhub.com%2Fblaskan%2Fwp-content%2Fuploads%2Fsites%2F63%2F2017%2F04%2F01_Article1.jpg" target="_blank" class="social-icons"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fcolorlibhub.com%2Fblaskan%2F2017%2F04%2F20%2Fexplore-new-places-every-single-day%2F&amp;title=Explore+new+places+every+single+day" target="_blank" class="social-icons"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+<p> <a href="https://colorlibhub.com/blaskan/2017/04/20/explore-new-places-every-single-day/#more-23" class="more-link">Continue reading <span class="screen-reader-text">“Explore new places every single day”</span> <span class="meta-nav">→</span></a></p></footer>
+  </div><!-- .entry-content -->
+</article><!-- #post-## -->
+<article id="post-20" class="col-md-6 col-sm-12 post-20 post type-post status-publish format-standard has-post-thumbnail hentry category-adventures category-citybreakes category-landscapes category-lifestyle category-travel tag-decor tag-design tag-dive tag-furniture tag-health tag-learn tag-lifestyle tag-materials tag-natural tag-run tag-supplies" style="position: absolute; left: 0%; top: 803.6px;">
+  <header class="entry-header">
+
+  <div class="entry-thumbnail"><a href="https://colorlibhub.com/blaskan/2017/04/20/travel-where-you-want/" rel="bookmark"><img width="350" height="250" src="https://149842022.v2.pressablecdn.com/blaskan/wp-content/uploads/sites/63/2017/04/01_Article2-350x250.jpg" class="attachment-small-blog-post-landscape size-small-blog-post-landscape wp-post-image" alt="" decoding="async"></a></div>
+              <div class="entry-meta">
+      <span class="byline">by <span class="author vcard"><a class="url fn n" href="https://colorlibhub.com/blaskan/author/demoblaskan/">Jane Smith</a></span></span><span class="posted-on"><span class="posted-on-delimeter">  -  </span><a href="https://colorlibhub.com/blaskan/2017/04/20/travel-where-you-want/" rel="bookmark"><time class="entry-date published" datetime="2017-04-20T08:45:40+00:00">April 20, 2017</time><time class="updated" datetime="2020-10-27T14:17:26+00:00">October 27, 2020</time></a></span>            </div><!-- .entry-meta -->
+  
+  <h2 class="entry-title"><a href="https://colorlibhub.com/blaskan/2017/04/20/travel-where-you-want/" rel="bookmark">Travel where you want.</a></h2>
+  </header><!-- .entry-header -->
+
+  <div class="entry-content">
+  <p>Integer in ante eu mauris interdum vehicula id vitae lacus. Nunc tempus quis metus ac cursus. Duis at erat sit amet ipsum malesuada semper. Aliquam at enim nec odio lobortis egestas. Pellentesque scelerisque erat et magna pellentesque elementum ut eu tortor. Curabitur nisi tellus, egestas non semper ac, cursus non nunc. Donec eget nibh a lacus tincidunt pretium ac at purus. Cras risus orci, elementum eu elementum quis, consectetur id odio. Nullam elementum, arcu at ornare sagittis, augue lorem lacinia dui, convallis lacinia turpis mi hendrerit elit. Mauris molestie massa arcu, sit amet faucibus mi venenatis non.</p>
+<footer class="entry-footer index-entry">
+<div class="post-social pull-left"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcolorlibhub.com%2Fblaskan%2F2017%2F04%2F20%2Ftravel-where-you-want%2F" target="_blank" class="social-icons"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="https://twitter.com/home?status=https%3A%2F%2Fcolorlibhub.com%2Fblaskan%2F2017%2F04%2F20%2Ftravel-where-you-want%2F" target="_blank" class="social-icons"><i class="fa fa-twitter" aria-hidden="true"></i></a><a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fcolorlibhub.com%2Fblaskan%2F2017%2F04%2F20%2Ftravel-where-you-want%2F&amp;media=https%3A%2F%2Fcolorlibhub.com%2Fblaskan%2Fwp-content%2Fuploads%2Fsites%2F63%2F2017%2F04%2F01_Article2.jpg" target="_blank" class="social-icons"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fcolorlibhub.com%2Fblaskan%2F2017%2F04%2F20%2Ftravel-where-you-want%2F&amp;title=Travel+where+you+want." target="_blank" class="social-icons"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+<p> <a href="https://colorlibhub.com/blaskan/2017/04/20/travel-where-you-want/#more-20" class="more-link">Continue reading <span class="screen-reader-text">“Travel where you want.”</span> <span class="meta-nav">→</span></a></p></footer>
+  </div><!-- .entry-content --> #}
+
+
+
+
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+{# 
   {% block content %}
     <article  class="col-md-12 col-sm-12 post type-post status-publish format-standard has-post-thumbnail hentry">
 
@@ -45,7 +129,7 @@
 
       {{ content | safe }}
     </article>
-  {% endblock %}
+  {% endblock %} #}
 
   </main>
 

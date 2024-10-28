@@ -22,7 +22,7 @@
 <div id="primary" class="content-area row">
 <main id="main" class="site-main col-md-8 col-sm-12" role="main">
 
-  <div id ="post-container" class="row" style="position: relative;">
+  <div id ="post-container" class="row" style="position: relative; height: fit-content;">
 {%- for post in collections.post | reverse-%}
         {# <li{% if page.url == post.url %} aria-current="page"{% endif %}>{{ post.data.title }}</li> #}
         {% if loop.index0 < 1 %}
@@ -30,21 +30,24 @@
         <a href="{{ post.url }}" {% if page.url == post.url %} aria-current="page"{% endif %}>{{ post.data.title }}</a>
         <span class="post-date">{{ post.date | postDate }}</span>
         </li> #}
-        <article id="post-23" class="big-post col-md-12 post-23 post type-post status-publish format-standard has-post-thumbnail hentry" style="position: absolute; left: 0%; top: 0px;">
+        <article id="post-23" class="big-post col-md-12 post-23 post type-post status-publish format-standard has-post-thumbnail hentry" style=" left: 0%; top: 0px;">
           <header class="entry-header">
                       <div class="entry-meta">
               <span class="byline">by <span class="author vcard"><a class="url fn n" href="https://colorlibhub.com/blaskan/author/demoblaskan/">{{ post.data.author }}</a></span></span> - <span class="post-date">{{ post.date | postDate }}</span></div><!-- .entry-meta -->
           
-          <h2 class="entry-title"> <a href="{{ post.url }}" {% if page.url == post.url %} aria-current="page"{% endif %}>{{ post.data.title }}</a></h2>
-          <div class="entry-thumbnail"><a href="{{ post.url }}" {% if page.url == post.url %} aria-current="page"{% endif %}><img width="1140" height="375" src="img/{{ post.data.image }}" class="attachment-big-blog-post size-big-blog-post" alt="" decoding="async" fetchpriority="high"></a></div>
+          <h2 class="entry-title"> <a href="{{ post.url }}#title">{{ post.data.title }}</a></h2>
+          <div class="entry-thumbnail"><a href="{{ post.url }}#title">
+            <img src="img/{{ post.data.image }}" class="attachment-big-blog-post size-big-blog-post" alt="" decoding="async" fetchpriority="high">
+          </a></div>
           </header><!-- .entry-header -->
         
           <div class="entry-content">
             {{ post.content | excerpt | safe }}
+          </div><!-- .entry-content -->
         <footer class="entry-footer index-entry">
         <div class="post-social pull-left">Socials</div>
-        <p> <a href="{{ post.url }}" class="more-link">Continue reading <span class="screen-reader-text">“Explore new places every single day”</span> <span class="meta-nav">→</span></a></p></footer>
-          </div><!-- .entry-content -->
+        <p> <a href="{{ post.url }}#title" class="more-link">Continue reading <span class="screen-reader-text">“Explore new places every single day”</span> <span class="meta-nav">→</span></a></p>
+      </footer>
         </article><!-- #post-## -->
   {% endif %}
 {%- endfor -%}
